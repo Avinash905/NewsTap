@@ -7,7 +7,7 @@ export default function Navbar() {
       <nav className="navbar shadow navbar-expand-lg navbar-dark bg-danger sticky-top">
         <div className="container-fluid">
           <NavLink className="navbar-brand text-decoration-none" to="/NewsTap/">
-            NewsTap/
+            NewsTap
           </NavLink>
           <button
             className="navbar-toggler"

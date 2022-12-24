@@ -9,11 +9,12 @@ export default function News(props) {
   const [totalData, setTotalData] = useState(0);
   const [page, setPage] = useState(1);
 
-  const url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&pageSize=${props.pageSize}&page=${page}&apiKey=${process.env.REACT_APP_API_KEY}`;
+  let url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&pageSize=${props.pageSize}&page=${page}&apiKey=${process.env.REACT_APP_API_KEY}`;
 
   useEffect(() => {
     const getData = async () => {
       try {
+        let url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&pageSize=${props.pageSize}&page=${page}&apiKey=${process.env.REACT_APP_API_KEY}`;
         setLoading(true);
         const data = await fetch(url);
         const jsonData = await data.json();
