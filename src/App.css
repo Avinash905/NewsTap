@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+.dropdown-item {
+  color: black !important;
+  background-color: #fff !important;
+}
+
+.dropdown-item:hover {
+  background-color: rgb(232, 229, 229) !important;
+}
