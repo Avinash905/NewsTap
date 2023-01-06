@@ -60,6 +60,7 @@ export default function News(props) {
       console.log(error);
     }
   };
+
   return (
     <div className="container my-3">
       <h1 className="text-center my-4">NewsTap - News around the globe</h1>
