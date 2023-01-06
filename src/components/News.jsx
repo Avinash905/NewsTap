@@ -26,7 +26,7 @@ export default function News(props) {
       }
     };
     getData();
-  }, [props.category]);
+  }, [props.category, page, props.country, props.pageSize]);
 
   const descProcess = (desc, num) => {
     if (desc == null) {
@@ -65,7 +65,7 @@ export default function News(props) {
       <h1 className="text-center my-4">NewsTap - News around the globe</h1>
       {loading && <Loading />}
       <InfiniteScroll
-        dataLength={apiData.length}
+        dataLength={apiData.length ? apiData.length : 10}
         next={fetchData}
         hasMore={apiData.length <= totalData}
         loader={!loading && <Loading />}
